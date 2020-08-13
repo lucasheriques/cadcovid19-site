@@ -5,20 +5,21 @@ const { theme } = resolveConfig(tailwindConfig)
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter Tailwind CSS",
-    author: "Melanie Nolan",
-    description: "A Gatsby starter to set you up with Tailwind CSS",
+    title: "CADCOV-19",
+    author: "PATREO",
+    description:
+      "Um sistema para auxiliar o dignóstico através de dados de imagens de raio-x e tomografias",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Gatsby Starter Tailwind CSS",
-        short_name: "Gatsby Starter Tailwind CSS",
+        name: "Projeto CADCOV-19",
+        short_name: "CADCOV-19",
         start_url: "/",
         background_color: theme.colors.white,
-        theme_color: theme.colors.teal[500],
+        theme_color: theme.colors.indigo[500],
         icon: "static/icon.svg",
       },
     },
@@ -28,5 +29,7 @@ module.exports = {
         postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
       },
     },
+    "gatsby-plugin-webpack-bundle-analyser-v2",
+    `gatsby-plugin-offline`,
   ],
 }

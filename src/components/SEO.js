@@ -7,7 +7,8 @@ const SEO = () => {
 
   return (
     <Helmet>
-      <html lang="en" />
+      <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
+      <html lang="pt" />
       <meta charSet="utf-8" />
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
