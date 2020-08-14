@@ -1,6 +1,64 @@
-import React from "react"
+import React, { useState } from "react"
+import loadingImage from "../images/loading.svg"
 
 const Contact = () => {
+  const [inputs, setInputs] = useState({
+    email: "",
+    name: "",
+    subject: "",
+    message: "",
+    loading: false,
+    success: false,
+    failure: false,
+  })
+
+  const handleChange = e => {
+    const { name, value } = e.target
+    setInputs(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    setInputs(prev => ({ ...prev, loading: true }))
+    const { email, name, subject, message } = inputs
+
+    const url = "https://mail-service-fawn.vercel.app/api/sendEmail"
+    const options = {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json;charset=UTF-8",
+      },
+      body: JSON.stringify({
+        email,
+        name,
+        subject,
+        message,
+      }),
+    }
+
+    fetch(url, options).then(response => {
+      if (response.status == 200) {
+        setInputs(prev => ({
+          email: "",
+          name: "",
+          subject: "",
+          message: "",
+          loading: false,
+          success: true,
+        }))
+        setTimeout(() => {
+          setInputs(prev => ({ ...prev, success: false }))
+        }, 5000)
+      } else {
+        setInputs(prev => ({ ...prev, loading: false, failure: true }))
+      }
+    })
+  }
+
+  const { loading, success } = inputs
+
   return (
     <div className="max-w-6xl sm:flex-row mx-auto grid my-8" id="contact">
       <div>
@@ -15,7 +73,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-4">
-        <form method="POST">
+        <form onSubmit={handleSubmit}>
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="name"
@@ -28,6 +86,8 @@ const Contact = () => {
             name="name"
             required
             placeholder="Nome"
+            value={inputs.name}
+            onChange={handleChange}
           />
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
@@ -41,6 +101,8 @@ const Contact = () => {
             name="email"
             required
             placeholder="Email"
+            value={inputs.email}
+            onChange={handleChange}
           />
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
@@ -54,6 +116,8 @@ const Contact = () => {
             name="subject"
             required
             placeholder="Assunto"
+            value={inputs.subject}
+            onChange={handleChange}
           />
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
@@ -67,13 +131,35 @@ const Contact = () => {
             placeholder="Digite sua mensagem"
             name="message"
             required
+            value={inputs.message}
+            onChange={handleChange}
           />
-          <button
-            className="max-w-sm justify-center bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit"
-          >
-            Enviar
-          </button>
+          <div>
+            <button
+              className={`max-w-sm justify-center text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
+                loading
+                  ? "cursor-not-allowed bg-indigo-300"
+                  : "bg-indigo-500 hover:bg-indigo-700"
+              }`}
+              type="submit"
+              disabled={inputs.loading}
+            >
+              Enviar
+            </button>
+            <img
+              src={loadingImage}
+              className={`inline ml-4 ${!loading ? "hidden" : ""}`}
+              alt="Loading..."
+              width="32"
+            />
+            <p
+              className={`text-sm mt-3 text-green-600 font-semibold ${
+                success ? "" : "hidden"
+              }`}
+            >
+              A mensagem foi enviada com sucesso! Responderemos em breve.
+            </p>
+          </div>
         </form>
       </div>
     </div>

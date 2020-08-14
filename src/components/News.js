@@ -22,7 +22,7 @@ const News = ({ children }) => {
             <img
               className="p-4 mb-4 sm:max-w-sm max-w-2"
               src={G1_logo}
-              width="150"
+              width="120"
               alt="noticia_g1"
             />
           </a>

@@ -14,7 +14,7 @@ const Project = () => {
             Sobre o projeto
           </h2>
           <p className="px-4 mt-8 text-lg text-gray-600 sm:mt-8 ">
-            A proposta do projeto CADCOV-19 é fornecer aos profissionais de
+            A proposta do projeto CADCOVID-19 é fornecer aos profissionais de
             saúde um sistema capaz de auxiliar o diagnósticos de doenças
             pulmonares a partir de imagens, com foco em casos relacionados ao
             surto de COVID-19. Seu principal objetivo é oferecer um sistema

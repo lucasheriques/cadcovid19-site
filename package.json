@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-tailwind-css",
+  "name": "CADCOVID-19",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:melanienolan/gatsby-starter-tailwind-css.git",
-  "author": "Melanie Nolan <melly.nolan@gmail.com>",
+  "author": "Lucas Henrique <lucasheriques@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
