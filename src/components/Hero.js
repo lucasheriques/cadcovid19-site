@@ -177,15 +177,14 @@ const Hero = ({ children }) => {
 
           <main className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
-              <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                Auxíliando ao combate do vírus{"\n"}
-                <br className="xl:hidden" />
-                <span className="text-indigo-600">COVID-19</span>
+              <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-5xl whitespace-pre-wrap">
+                Auxiliando o combate do{" "}
+                <span className="text-indigo-600 sm:block pt-2">COVID-19</span>
               </h2>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 O projeto CADCOV-19 tem a proposta de oferecer um sistema online
-                para auxiliar no diagnóstico utilizando técnicas de inteligência
-                artificial e visão computacional.
+                para auxiliar no diagnóstico da COVID-19 utilizando técnicas de
+                inteligência artificial e visão computacional.
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
