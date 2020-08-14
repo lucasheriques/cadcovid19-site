@@ -5,7 +5,7 @@ const { theme } = resolveConfig(tailwindConfig)
 
 module.exports = {
   siteMetadata: {
-    title: "CADCOV-19",
+    title: "CADCOVID-19",
     author: "PATREO",
     description:
       "Um sistema para auxiliar o dignóstico através de dados de imagens de raio-x e tomografias",
@@ -15,8 +15,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Projeto CADCOV-19",
-        short_name: "CADCOV-19",
+        name: "Projeto CADCOVID-19",
+        short_name: "CADCOVID-19",
         start_url: "/",
         background_color: theme.colors.white,
         theme_color: theme.colors.indigo[500],

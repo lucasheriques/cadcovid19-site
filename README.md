@@ -1,10 +1,6 @@
-# Gatsby Starter Tailwind CSS
+# CADCOVID-19 website
 
-Start your project quickly with this Tailwind CSS starter. This starter provides you with the basics to get up and running quickly with [Tailwind CSS](https://tailwindcss.com/).
-
-[Tailwind CSS](https://tailwindcss.com/) is a utility-first CSS framework for rapidly building custom designs.
-
-This starter uses Tailwind CSS v1.4.1 and therefore includes built-in PurgeCSS support through Tailwind itself. The starter sets you up with the following:
+This project is made using Gatsby Starter Tailwind CSS. It comes with:
 
 - `src/css/tailwind.css` where Tailwind's `base`, `components` and `utilities` directives are injected
 - `tailwind.config.js` where you can customise the [Tailwind configuration](https://tailwindcss.com/docs/configuration/)
@@ -13,27 +9,11 @@ This starter uses Tailwind CSS v1.4.1 and therefore includes built-in PurgeCSS s
 - `gatsby-plugin-react-helmet`
 - `gatsby-plugin-manifest`
 
-## Demo site
+## Access
 
-The demo site can be found [here](https://gatsby-starter-tailwind-css.netlify.app/)
+The site can be accessed [here](https://cadcovid19.surge.sh/)
 
-## Get started
+## About the project
 
-1. **Create your Gatsby site**
-
-Use the Gatsby CLI (`npm install -g gatsby-cli` if you don't have it already) to create your Gatsby site with Gatsby Starter Tailwind CSS:
-
-```bash
-gatsby new my-project-name https://github.com/melanienolan/gatsby-starter-tailwind-css
-```
-
-2. **Start developing**
-
-Navigate to your project folder and start the development server:
-
-```bash
-cd my-project-name
-gatsby develop
-```
-
-Now you'll be all set to go ahead and create your Gatsby site with Tailwind CSS!
+CADCOVID-19 is a tool to help with the diagnostic of pulmonar diseases by using deep learning, where we take X-ray images as input and returns
+the probability of a disease, specially COVID-19.

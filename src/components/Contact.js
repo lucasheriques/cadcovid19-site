@@ -39,7 +39,7 @@ const Contact = () => {
     }
 
     fetch(url, options).then(response => {
-      if (response.status == 200) {
+      if (response.status === 200) {
         setInputs(prev => ({
           email: "",
           name: "",
