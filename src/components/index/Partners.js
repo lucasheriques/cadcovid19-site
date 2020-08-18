@@ -1,7 +1,7 @@
 import React from "react"
-import ufmglogo from "../images/ufmg.png"
-import fapemiglogo from "../images/fapemig.jpg"
-import patreologo from "../images/patreo.png"
+import ufmglogo from "../../images/ufmg.png"
+import fapemiglogo from "../../images/fapemig.jpg"
+import patreologo from "../../images/patreo.png"
 
 const Partners = ({ children }) => {
   return (

@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Hero from "../components/Hero"
-import Contact from "../components/Contact"
-import Partners from "../components/Partners"
-import News from "../components/News"
-import Project from "../components/Project"
+import Hero from "../components/index/Hero"
+import Contact from "../components/index/Contact"
+import Partners from "../components/index/Partners"
+import News from "../components/index/News"
+import Project from "../components/index/Project"
 
 export default () => {
   return (

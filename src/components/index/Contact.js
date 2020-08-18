@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import loadingImage from "../images/loading.svg"
+import loadingImage from "../../images/loading.svg"
 
 const Contact = () => {
   const [inputs, setInputs] = useState({

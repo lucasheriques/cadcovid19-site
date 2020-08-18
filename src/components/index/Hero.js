@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Transition from "./Transition"
-import heroImage from "../images/coronavirus.jpg"
+import heroImage from "../../images/coronavirus.jpg"
 
 const Hero = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)

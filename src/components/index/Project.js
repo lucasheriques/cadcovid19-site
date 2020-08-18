@@ -1,10 +1,10 @@
 import React from "react"
-import medicImage from "../images/medical-research.svg"
-import aiImage from "../images/ai.svg"
+import medicImage from "../../images/medical-research.svg"
+import aiImage from "../../images/ai.svg"
 
 const Project = () => {
   return (
-    <main
+    <div
       className="max-w-6xl flex-grow mx-auto flex flex-col justify-around"
       id="project"
     >
@@ -45,7 +45,7 @@ const Project = () => {
           alt="Gatsby and Tailwind CSS together"
         />
       </div>
-    </main>
+    </div>
   )
 }
 

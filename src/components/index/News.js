@@ -1,5 +1,5 @@
 import React from "react"
-import G1_logo from "../images/G1_logo.svg"
+import G1_logo from "../../images/G1_logo.svg"
 
 const News = ({ children }) => {
   return (
