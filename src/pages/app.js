@@ -1,9 +1,17 @@
 import React from "react"
+import { Router } from "@reach/router"
+import Layout from "../components/layout"
+import Profile from "../components/profile"
+import Login from "../components/login"
+import PrivateRoute from "../components/PrivateRoute"
 
-export default () => {
-  return (
-    <main class="max-w-6xl flex-grow flex-row-reverse mx-auto mt-4 grid sm:grid-cols-2 sm:grid-rows-1 justify-around items-center">
-      fdasdfasdfafasdfs
-    </main>
-  )
-}
+const App = () => (
+  <Layout>
+    <Router>
+      <PrivateRoute path="/app/profile" component={Profile} />
+      <Login path="/app/login" />
+    </Router>
+  </Layout>
+)
+
+export default App

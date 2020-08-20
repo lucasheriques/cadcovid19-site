@@ -1,5 +1,6 @@
 const resolveConfig = require("tailwindcss/resolveConfig")
 const tailwindConfig = require("./tailwind.config.js")
+const path = require("path")
 
 const { theme } = resolveConfig(tailwindConfig)
 
@@ -22,6 +23,20 @@ module.exports = {
         theme_color: theme.colors.indigo[500],
         icon: "static/icon.svg",
       },
+    },
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        src: path.join(__dirname, "src"),
+        pages: path.join(__dirname, "src/pages"),
+        components: path.join(__dirname, "src/components"),
+        images: path.join(__dirname, "src/images"),
+        services: path.join(__dirname, "src/services"),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
     },
     {
       resolve: "gatsby-plugin-postcss",

@@ -1,12 +1,13 @@
 import React, { useState } from "react"
-import Transition from "./Transition"
-import heroImage from "../../images/coronavirus.jpg"
+import Transition from "../Transition"
+import heroImage from "images/coronavirus.jpg"
+import { Link } from "gatsby"
 
 const Hero = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className="relative bg-white overflow-hidden">
-      <div className="max-w-screen-xl mx-auto">
+    <div className="relative bg- overflow-hidden">
+      <div className="max-w-screen-lg mx-auto">
         <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
           <svg
             className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
@@ -80,12 +81,12 @@ const Hero = ({ children }) => {
                 >
                   Parceiros
                 </a>
-                <a
-                  href="#"
+                <Link
+                  to="/app"
                   className="ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out"
                 >
                   Sistema
-                </a>
+                </Link>
               </div>
             </nav>
           </div>
@@ -162,13 +163,13 @@ const Hero = ({ children }) => {
                     </a>
                   </div>
                   <div>
-                    <a
-                      href="#"
+                    <Link
+                      to="/app"
                       className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out"
                       role="menuitem"
                     >
                       Sistema
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
