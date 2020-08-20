@@ -1,7 +1,7 @@
 import React from "react"
-import SEO from "./SEO"
+import SEO from "../SEO"
 
-const Layout = ({ children }) => {
+const SiteLayout = ({ children }) => {
   return (
     <>
       <SEO />
@@ -18,4 +18,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout
+export default SiteLayout

@@ -1,14 +1,14 @@
 import React from "react"
-import Layout from "../components/Layout"
-import Hero from "../components/index/Hero"
-import Contact from "../components/index/Contact"
-import Partners from "../components/index/Partners"
-import News from "../components/index/News"
-import Project from "../components/index/Project"
+import SiteLayout from "../components/site/SiteLayout"
+import Hero from "../components/site/Hero"
+import Contact from "../components/site/Contact"
+import Partners from "../components/site/Partners"
+import News from "../components/site/News"
+import Project from "../components/site/Project"
 
 export default () => {
   return (
-    <Layout>
+    <SiteLayout>
       <Hero />
       <div>
         <Partners />
@@ -24,6 +24,6 @@ export default () => {
       <div className="bg-gray-50">
         <Contact />
       </div>
-    </Layout>
+    </SiteLayout>
   )
 }

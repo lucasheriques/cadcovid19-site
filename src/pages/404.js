@@ -1,13 +1,13 @@
 import React from "react"
-import Layout from "../components/Layout"
 import notFoundImage from "../images/not-found-image.svg"
+import SiteLayout from "../components/site/SiteLayout"
 
 export default () => {
   return (
-    <Layout>
+    <SiteLayout>
       <main className="max-w-4xl flex-grow mx-auto flex flex-col justify-around">
         <img className="p-4" src={notFoundImage} alt="Page not found" />
       </main>
-    </Layout>
+    </SiteLayout>
   )
 }
