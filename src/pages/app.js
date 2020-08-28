@@ -2,16 +2,20 @@ import React from "react"
 import { Router } from "@reach/router"
 import Layout from "../components/layout"
 import Profile from "../components/profile"
-import Login from "../components/login"
 import PrivateRoute from "../components/PrivateRoute"
+import Home from "../components/Home"
+import { isLoggedIn } from "../services/auth"
 
-const App = () => (
-  <Layout>
-    <Router>
-      <PrivateRoute path="/app/profile" component={Profile} />
-      <Login path="/app/login" />
-    </Router>
-  </Layout>
-)
+const App = () => {
+  return (
+    <Layout>
+      <Router basepath="/app">
+        <PrivateRoute path="/" component={Home} />
+        <PrivateRoute path="/profile" component={Profile} />
+      </Router>
+      PAGINA PRINCIPAL
+    </Layout>
+  )
+}
 
 export default App
