@@ -66,13 +66,13 @@ const Contact = () => {
           Fale conosco
         </h2>
         <div className="sm:px-2">
-          <p className="px-4 mt-8 text-lg text-gray-600 sm:mt-8">
-            Algum texto para informar aos interessados sobre dúvidas, entrar em
-            contato. Também devemos colocar algo para conseguir novos parceiros?
+          <p className="px-4 mt-8 text-lg text-gray-500 sm:mt-8 text-center">
+            Se tiver alguma dúvida, sugestão, ou quiser saber mais algum detalhe
+            sobre o projeto, entre em contato.
           </p>
         </div>
       </div>
-      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-4">
+      <div className="bg-gray-50 shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-4">
         <form onSubmit={handleSubmit}>
           <label
             className="block text-gray-700 text-sm font-bold mb-2"

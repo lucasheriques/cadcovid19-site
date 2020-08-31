@@ -1,5 +1,6 @@
 const resolveConfig = require("tailwindcss/resolveConfig")
 const tailwindConfig = require("./tailwind.config.js")
+const path = require(`path`)
 
 const { theme } = resolveConfig(tailwindConfig)
 
@@ -20,7 +21,7 @@ module.exports = {
         start_url: "/",
         background_color: theme.colors.white,
         theme_color: theme.colors.indigo[500],
-        icon: "static/icon.svg",
+        icon: "src/images/icon.svg",
       },
     },
     {
@@ -29,7 +30,16 @@ module.exports = {
         postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `teamImg`,
+        path: `${__dirname}/src/images/team/`,
+      },
+    },
     "gatsby-plugin-webpack-bundle-analyser-v2",
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
   ],
 }

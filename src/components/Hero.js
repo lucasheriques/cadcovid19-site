@@ -69,16 +69,16 @@ const Hero = ({ children }) => {
                 </a>
 
                 <a
+                  href="#team"
+                  className="ml-8 font-medium text-gray-500 hover:text-indigo-900 transition duration-150 ease-in-out"
+                >
+                  Equipe
+                </a>
+                <a
                   href="#contact"
                   className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Fale conosco
-                </a>
-                <a
-                  href="#partners"
-                  className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
-                >
-                  Parceiros
                 </a>
                 <a
                   href="#"
@@ -154,11 +154,11 @@ const Hero = ({ children }) => {
                       Fale conosco
                     </a>
                     <a
-                      href="#parters"
+                      href="#team"
                       className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                       role="menuitem"
                     >
-                      Parceiros
+                      Equipe
                     </a>
                   </div>
                   <div>

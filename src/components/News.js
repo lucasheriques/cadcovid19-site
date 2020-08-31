@@ -20,7 +20,7 @@ const News = ({ children }) => {
             rel="noopener noreferrer"
           >
             <img
-              className="p-4 mb-4 sm:max-w-sm max-w-2"
+              className="p-4 my-8 sm:max-w-sm max-w-2"
               src={G1_logo}
               width="120"
               alt="noticia_g1"
